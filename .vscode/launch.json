@@ -1,0 +1,44 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch application_test",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/workspaces/ringsend/build/application_test",
+            "cwd": "/workspaces/ringsend",
+            "MIMode": "gdb",
+            "preLaunchTask": "cmake",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) Launch main",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/workspaces/ringsend/build/ringsend",
+            "cwd": "/workspaces/ringsend",
+            "MIMode": "gdb",
+            "preLaunchTask": "cmake",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "args": [
+                "3",
+                "3000"
+            ]
+        }
+    ]
+}
